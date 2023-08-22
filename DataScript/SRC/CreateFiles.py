@@ -29,7 +29,7 @@ dst_road = '../OUT/road.shp'
 
 # /home/flavien/Documents/Alternance/data/Carte/roadTopo/BDTOPO_3-3_TOUSTHEMES_SHP_LAMB93_D031_2023-03-15/BDTOPO/1_DONNEES_LIVRAISON_2023-03-00212/BDT_3-3_SHP_LAMB93_D031-ED2023-03-15/BATI/BATIMENT.shp'
 src_bati = '../IN/BATIMENT.shp'
-dst_bati = '../OUT/bati.shp'
+dst_bati = '../OUT/buildings.shp'
 
 population_model = '../OUT/populationModel.csv'
 
@@ -66,7 +66,7 @@ if (not os.path.exists(in_path)):
 
 if (not os.path.exists(dst_ppl)):
     print('create EMD classified people file')
-    Shabou.createPeople(src_ppl, dst_ppl)
+    Shabou.classifyEMD(src_ppl, dst_ppl)
     print('create activity file')
     Shabou.createActivityChain(src_depl, dst_depl)
 
@@ -109,7 +109,7 @@ else:
 if (not os.path.exists(dst_road)):
     print('creating roads')
     road = gpd.read_file(src_road)
-    road = Cs.intersectCercle(road, communes, communeAEtudier, rayon)
+    road = Cs.intersectCircle(road, communes, communeAEtudier, rayon)
     road = Fr.format_route_direct(road)
     road.to_file(dst_road)
 else:
@@ -118,7 +118,7 @@ else:
 if (not os.path.exists(dst_bati)):
     print('creating bati')
     bati = gpd.read_file(src_bati)
-    bati = Cs.intersectCercle(bati, communes, communeAEtudier, rayon)
+    bati = Cs.intersectCircle(bati, communes, communeAEtudier, rayon)
     bati = Cs.normalise_bati_topo(bati)
     bati.to_file(dst_bati)
 else:

@@ -32,7 +32,7 @@ def createProfileList(r) :
             i+=1"""
     return ret
 
-def createPeople(src,dst):
+def classifyEMD(src, dst):
     print('create new people file')
     ppl = pd.read_csv(src,sep=';',header=0)
     ppl['people_in_foy'] = 0

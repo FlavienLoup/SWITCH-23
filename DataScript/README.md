@@ -16,6 +16,8 @@ Afin de modifier un fichier, il faut donc : Modifier le fichier source dans IN p
 
 - **BATIMENT.xxx** : sont les fichiers shapefiles des bâtiments à récupérer dans la BD Topo.
 - **TRONCON_DE_ROUTE.XXX** : sont les fichiers shapefile des routes à récupérer dans la BD topo.
+- **COMMUNE.XXX** : ensemble des commune française trouvable dans la bd topo
+- **population** : population a simuler au format de l'EMD de Toulouse (pour le moment copie de l'emd)
 - **EMD_depl** : est le fichier déplacement de la base de donnée EMD (enquête ménage déplacement).
 - **EMD_pers** : est le fichier personne de la base de donnée EMD.
 
@@ -78,6 +80,10 @@ le fichier ou en télécharger un nouveau. Il faut que le fichier corresponde au
 Toute les colones ne sont pas utiliser les utiles sont :
 P2(genre), P4(age), P8(niveau d'étude), P9(activité principale) et PCSD(Catégorie socioprofessionnelle)
 ````
+EMD Grenoble : <https://www.data.gouv.fr/fr/datasets/enquetes-menages-deplacements-emd/>
+
+info EMD Toulouse : <https://data.progedo.fr/studies/doi/10.13144/lil-0933>
+
 
 ### EN :
 ```
