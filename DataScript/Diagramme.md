@@ -7,5 +7,4 @@ Ce diagramme montre l'ordonnancement des différentes fonctions permettant de cr
 données nécessaires à la simulation. Il indique aussi les données en entrée et en sortie
 de ses fonctions.
 Chacune des fonctions est numérotée. La numérotation indique l'ordre dans lequel sont effectué les actions.
-Les actions avec un numéro égalent peuvent être réalisées dans un ordre indifférent et son donc parallélisable.
-
+Les actions avec un numéro égale peuvent être réalisées dans un ordre indifférent et son donc parallélisable.
